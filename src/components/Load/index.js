@@ -7,3 +7,5 @@ const Load = () => (
         <img src={loadingIcon} alt="Loading" />
     </div>
 )
+
+export default Load;

@@ -3,6 +3,7 @@ import SearchBar from '../SearchBar';
 import searchPhotos from './api';
 import Images from '../Images';
 import Error from '../Error';
+import Load from '../Load';
 
 export default class App extends Component {
 
@@ -50,7 +51,7 @@ export default class App extends Component {
         <SearchBar onSubmit={this.onSearchSubmit}/>
 
         {
-          (this.state.error) ? <Error /> : <Images images={this.state.images} />
+          (this.state.loading) ? <Load /> : (this.state.error) ? <Error /> : <Images images={this.state.images} />
         }
         
 
