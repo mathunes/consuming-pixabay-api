@@ -18,6 +18,11 @@ export default class App extends Component {
     
   }
 
+  componentDidMount() {
+    this.onSearchSubmit('');
+  }
+
+
   render() {
     return (
       <div className="App">
