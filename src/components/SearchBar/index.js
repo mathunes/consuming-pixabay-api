@@ -33,9 +33,8 @@ export default class SearchBar extends Component {
                         type="text" 
                         value={this.state.value} 
                         placeholder="Pesquisar imagem..." onChange={this.setText}></input>
-                    {/* <input type="submit"></input> */}
                     <button type="submit">
-                        <img src={searchIcon} type="submit" alt="Search icon" />
+                        <img src={searchIcon} type="submit" alt="Search icon" className="search-icon" />
                     </button>
                     
                 </form>
