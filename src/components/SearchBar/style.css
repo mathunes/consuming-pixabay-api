@@ -1,0 +1,32 @@
+.search-bar {
+    
+}
+
+.search-bar form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-bar form * {
+    margin: 0 5px
+}
+
+.search-bar form input {
+    padding: 10px;
+    border: 3px solid #94090D;
+    border-radius: 50px;
+}
+
+.search-bar form button {
+    background-color: transparent;
+    border: 0;
+}
+
+.search-bar form button img {
+    height: 30px;
+}
+
+.search-bar form button img:hover {
+    cursor: pointer;
+}

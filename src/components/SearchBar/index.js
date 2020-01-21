@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './style.css';
+import searchIcon from '../../assets/image/search.png';
 
 export default class SearchBar extends Component {
 
@@ -24,13 +26,17 @@ export default class SearchBar extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container search-bar">
                 <form onSubmit={this.searchImage}>
                     <input 
                         type="text" 
                         value={this.state.value} 
                         placeholder="Pesquisar imagem..." onChange={this.setText}></input>
-                    <input type="submit" value="Pesquisar"/>   
+                    {/* <input type="submit"></input> */}
+                    <button type="submit">
+                        <img src={searchIcon} type="submit" alt="Search icon" />
+                    </button>
+                    
                 </form>
             </div>
         )
