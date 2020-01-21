@@ -17,18 +17,21 @@ export default class SearchBar extends Component {
         });
     }
 
-    searchImage() {
-        this.props = this.state.text
+    searchImage(event) {
+        event.preventDefault();
+        this.props.onSubmit(this.state.text)
     }
 
     render() {
         return (
             <div className="container">
-                <input 
-                    type="text" 
-                    value={this.state.value} 
-                    placeholder="Pesquisar imagem..." onChange={this.setText}></input>
-                <input type="submit" value="Pesquisar" onClick={this.searchImage}/>   
+                <form onSubmit={this.searchImage}>
+                    <input 
+                        type="text" 
+                        value={this.state.value} 
+                        placeholder="Pesquisar imagem..." onChange={this.setText}></input>
+                    <input type="submit" value="Pesquisar"/>   
+                </form>
             </div>
         )
     }
